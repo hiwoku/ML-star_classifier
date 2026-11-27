@@ -125,9 +125,9 @@ Invalid inputs (negative radius, unknown colour like `"purple"`) are rejected wi
 
 A dark, space-themed app in three tabs, written for people who don't know the internals:
 
-- **🔭 Classify a star.** Pick a famous star (Sun, Betelgeuse, Rigel, Sirius B, Proxima Centauri) or enter your own values. Every input has a plain-language hint ("≈ 120,000× brighter than the Sun"). The answer shows up as a card with the star type, a short explanation and the model's confidence. Below it you see how the model scored every type, and a **Hertzsprung–Russell diagram** that marks your star ⭐ among the 240 training stars.
-- **🧠 How the model works.** The app reads the experiment **directly from the MLflow tracking server** and compares all 5 algorithms. It also shows which registered model version (`@champion`) is serving predictions, with links to the MLflow UI and the API docs.
-- **📖 Star types guide.** One card per class, with typical temperature, luminosity and radius taken from the dataset.
+- ** Classify a star.** Pick a famous star (Sun, Betelgeuse, Rigel, Sirius B, Proxima Centauri) or enter your own values. Every input has a plain-language hint ("≈ 120,000× brighter than the Sun"). The answer shows up as a card with the star type, a short explanation and the model's confidence. Below it you see how the model scored every type, and a **Hertzsprung–Russell diagram** that marks your star  among the 240 training stars.
+- ** How the model works.** The app reads the experiment **directly from the MLflow tracking server** and compares all 5 algorithms. It also shows which registered model version (`@champion`) is serving predictions, with links to the MLflow UI and the API docs.
+- ** Star types guide.** One card per class, with typical temperature, luminosity and radius taken from the dataset.
 
 Under the hood the app calls FastAPI (`/model-info`, `/predict`) and the MLflow REST API. The user never sees raw requests.
 
