@@ -44,9 +44,13 @@ services:
     ports:
       - "8501:8501"
     environment:
-      API_URL: http://api:8000
+      API_URL: http://api:8000             # how the app reaches the API inside Docker
+      MLFLOW_URL: http://mlflow:5000       # reads experiment results for the "How the model works" tab
+      API_PUBLIC_URL: http://localhost:8000      # links opened in your browser
+      MLFLOW_PUBLIC_URL: http://localhost:5000
     depends_on:
       - api
+      - mlflow
 
 volumes:
   mlflow-data:
